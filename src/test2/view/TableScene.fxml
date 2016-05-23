@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="test2.controller.TableSceneController">
+  <children>
+    <MenuBar id="gameMenu" fx:id="menuBar" layoutX="0.0" layoutY="2.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="Játék" fx:id="gameMenu">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleNewGameAction" text="Új játék" fx:id="newGame" />
+            <MenuItem mnemonicParsing="false" onAction="#handleScoreAction" text="Ranglista" fx:id="score" />
+            <MenuItem mnemonicParsing="false" onAction="#handleExitAction" text="Kilépés" fx:id="exit" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <GridPane fx:id="buttonGrid" layoutX="0.0" layoutY="57.0" prefHeight="579.0" prefWidth="600.0">
+      <children>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92145838012948" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="0">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="0">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="0">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="0">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="0">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="0">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="0">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="1">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="1">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="1">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="1">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="1">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="2">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="2">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="2">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="2">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="2">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="3">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="3">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url="file:/D:/Egyetem/Progtech/2016/figure_white.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="3">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url="file:/D:/Egyetem/Progtech/2016/figure_black.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="3">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="3">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="3">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="4">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="4">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url="file:/D:/Egyetem/Progtech/2016/figure_black.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="4">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url="file:/D:/Egyetem/Progtech/2016/figure_white.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="4">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="4">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="4">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="5">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="5">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="5">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="5">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="5">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="5">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="5">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="6">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="6">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="6">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="6">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="6">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="6">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="6">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="6">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="7">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="7">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="7">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="7">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="7">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="7">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="7">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleTableButtonAction" prefHeight="67.95001220703125" prefWidth="72.0" text="" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="7">
+          <graphic>
+            <ImageView fitHeight="54.99999237060547" fitWidth="53.92155913584261" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url = "file:resources/figure_empty.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+</AnchorPane>

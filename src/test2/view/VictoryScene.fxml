@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minHeight="111.0" prefHeight="111.0" prefWidth="325.9998779296875" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="test2.controller.VictorySceneController">
+  <children>
+    <Button id="okButton" fx:id="okButton" layoutX="144.0" layoutY="56.0" onAction="#handleButtonAction" text="OK" />
+    <Label fx:id="messageLabel" layoutX="84.0" layoutY="35.0" prefHeight="21.0" prefWidth="158.0" text="Foo" textAlignment="CENTER" wrapText="false" />
+  </children>
+</AnchorPane>

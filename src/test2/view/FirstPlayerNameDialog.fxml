@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="409.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="test2.controller.FirstPlayerNameController">
+  <children>
+    <Button id="button" fx:id="okButton" layoutX="170.0" layoutY="90.0" onAction="#handleButtonAction" text="OK" />
+    <Label layoutX="15.0" layoutY="52.0" prefHeight="19.0" prefWidth="158.0" text="Kérem az első játékos nevét:" />
+    <TextField fx:id="userNameTextArea" layoutX="173.0" layoutY="52.0" prefWidth="200.0" />
+  </children>
+</AnchorPane>
