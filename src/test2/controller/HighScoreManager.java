@@ -92,16 +92,22 @@ public class HighScoreManager {
         }
 
         Element element = doc.getDocumentElement();
-        NodeList entries = element.getChildNodes();
+        NodeList entries = element.getElementsByTagName("entry");
         boolean found = false;
 
         for (int i = 0; i < entries.getLength(); i++) {
             Element entry = (Element) entries.item(i);
 
-            if (entry.getElementsByTagName("name").item(0).equals(hsEntry.getName())) {
-                entry.getElementsByTagName("wins").item(0).setTextContent(Integer.toString(hsEntry.getWins()));
-                entry.getElementsByTagName("losses").item(0).setTextContent(Integer.toString(hsEntry.getLosses()));
-                entry.getElementsByTagName("bestScore").item(0).setTextContent(Integer.toString(hsEntry.getBestScore()));
+            if (entry.getElementsByTagName("name").item(0).getTextContent().equals(hsEntry.getName())) {
+                int wins = Integer.parseInt(entry.getElementsByTagName("wins").item(0).getTextContent()) + hsEntry.getWins();
+                int losses = Integer.parseInt(entry.getElementsByTagName("losses").item(0).getTextContent()) + hsEntry.getLosses();
+                int bestScore = Integer.parseInt(entry.getElementsByTagName("bestScore").item(0).getTextContent());
+                if (hsEntry.getBestScore() > bestScore)
+                        bestScore = hsEntry.getBestScore();
+
+                entry.getElementsByTagName("wins").item(0).setTextContent(Integer.toString(wins));
+                entry.getElementsByTagName("losses").item(0).setTextContent(Integer.toString(losses));
+                entry.getElementsByTagName("bestScore").item(0).setTextContent(Integer.toString(bestScore));
                 found = true;
             }
         }
@@ -133,10 +139,10 @@ public class HighScoreManager {
     public List<HighScoreEntry> getEntries() {
         List<HighScoreEntry> result = new ArrayList<HighScoreEntry>();
         Document doc = loadXML();
-        
+
         if (doc != null) {
             Element element = doc.getDocumentElement();
-            NodeList entries = element.getChildNodes();
+            NodeList entries = element.getElementsByTagName("entry");
 
             for (int i = 0; i < entries.getLength(); i++) {
                 Element entry = (Element) entries.item(i);
@@ -146,7 +152,7 @@ public class HighScoreManager {
                 hsEntry.setWins(Integer.parseInt(entry.getElementsByTagName("wins").item(0).getTextContent()));
                 hsEntry.setLosses(Integer.parseInt(entry.getElementsByTagName("losses").item(0).getTextContent()));
                 hsEntry.setBestScore(Integer.parseInt(entry.getElementsByTagName("bestScore").item(0).getTextContent()));
-                
+
                 result.add(hsEntry);
             }
         }

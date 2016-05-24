@@ -66,7 +66,7 @@ public class GameController {
         HighScoreEntry entry = new HighScoreEntry();
         entry.setName(player.getName());
         entry.setWins(ally>enemy?1:0);
-        entry.setLosses(ally<=enemy?1:0);
+        entry.setLosses(ally<enemy?1:0);
         entry.setBestScore(ally);
 
         HighScoreManager.getInstance().insertOrUpdateEntry(entry);

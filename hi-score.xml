@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><entries><entry><name>1</name><wins>0</wins><losses>1</losses><bestScore>22</bestScore></entry><entry><name>2</name><wins>1</wins><losses>0</losses><bestScore>42</bestScore></entry></entries>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entries>
+<entry>
+<name>1</name>
+<wins>0</wins>
+<losses>2</losses>
+<bestScore>20</bestScore>
+</entry>
+<entry>
+<name>2</name>
+<wins>1</wins>
+<losses>0</losses>
+<bestScore>42</bestScore>
+</entry>
+<entry>
+<name>asd</name>
+<wins>0</wins>
+<losses>1</losses>
+<bestScore>8</bestScore>
+</entry>
+<entry>
+<name>z</name>
+<wins>0</wins>
+<losses>1</losses>
+<bestScore>29</bestScore>
+</entry>
+<entry>
+<name>u</name>
+<wins>2</wins>
+<losses>0</losses>
+<bestScore>40</bestScore>
+</entry>
+</entries>
